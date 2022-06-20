@@ -84,7 +84,7 @@ import java.util.stream.Stream;
  * <p>Example4:
  * <pre>{@code
  * @Validate.Support(desc = "付款状态查询")
- * public class ReqPayStatusQryDTO implements Serializable {
+ * public class XXX implements Serializable {
  *     private static final long serialVersionUID = 5426323079139451832L;
  *     // 提现业务流水号
  *     @Validate(desc = "提现业务流水号", size = @Validate.Size(max = 32))
