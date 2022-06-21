@@ -66,11 +66,11 @@ Validate.Result ret = Validate.Validator.validate(xxx);
 @Validate.Support(desc = "付款状态查询")
  public class XXX implements Serializable {
      private static final long serialVersionUID = 5426323079139451832L;
-     // 提现业务流水号
+     // 提现业务流水号, 条件必输，提现业务流水号和付款单号必须提供其中一个
      @Validate(desc = "提现业务流水号", size = @Validate.Size(max = 32))
      @Validate(desc = "提现业务流水号", spEL = "${!isEmpty(bsid) || !isEmpty(payno)}", message = "或付款单号不能为空")
      private String bsid;
-     // 付款单号
+     // 付款单号, 条件必输，提现业务流水号和付款单号必须提供其中一个
      @Validate(desc = "付款单号", size = @Validate.Size(max = 19))
      private String payno;
  
